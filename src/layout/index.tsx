@@ -20,6 +20,7 @@ const LayoutUIWrapper = styled.div`
 
     ._content {
       grid-column: 3/13;
+      overflow-y: scroll;
     }
   }
 `;
