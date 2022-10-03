@@ -1,3 +1,3 @@
 # African music streaming app
 
-![alt text](./src/assets/images/screen.png)
+![alt text](./src/assets/screen.png)
