@@ -5,6 +5,7 @@ import Recommended from "./children/recommended";
 import TopMonth from "./children/top-month";
 import SizedBox from "../../components/sized-box";
 import DiscoverController from "./controller";
+import PostBanner from "./children/post-banner";
 
 const DiscoverUIWrapper = styled.section`
     padding-bottom: 2rem;
@@ -23,6 +24,8 @@ const DiscoverUI = ({}: DiscoverUIProps) => {
         <TopMonth />
         <SizedBox height={30} />
         <Recommended albums={albums} title={"Afro music"} />
+        <SizedBox height={30} />
+        <PostBanner />
         <SizedBox height={30} />
         <Recommended albums={albums} title={"New trends"} />
         <SizedBox height={30} />
