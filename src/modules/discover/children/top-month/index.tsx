@@ -30,7 +30,7 @@ const TopMonth = ({}: TopMonthProps) => {
         <div className="_top">
             {
                 [1,2,3,4,5,6,7,8,9].map((item, index) => {
-                    return <TopItem rank={index + 1} />
+                    return <TopItem rank={index + 1} key={index} />
                 })
             }
         </div>

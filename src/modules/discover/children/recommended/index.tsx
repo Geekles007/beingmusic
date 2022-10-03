@@ -4,6 +4,7 @@ import {BiChevronLeft, BiChevronRight} from "react-icons/all";
 import Slider from "react-slick";
 import RecommendedController from "./controller";
 import AlbumItem from "../../../../components/album-item";
+import {IAlbum} from "../../../../models/IAlbum";
 
 const RecommendedWrapper = styled.div`
   ._head {
@@ -41,16 +42,19 @@ const RecommendedWrapper = styled.div`
   }
 `;
 
-type RecommendedProps = {}
+type RecommendedProps = {
+    title: string;
+    albums: IAlbum[];
+}
 
-const Recommended = ({}: RecommendedProps) => {
+const Recommended = ({title, albums}: RecommendedProps) => {
 
-    const {goNext, goPrev, settings, albums} = RecommendedController;
+    const {goNext, goPrev, settings} = RecommendedController;
     const slider = React.createRef<any>();
 
     return <RecommendedWrapper>
         <div className="_head">
-            <strong>Recommended Albums</strong>
+            <strong>{title}</strong>
             <div className="_more">
                 <a onClick={() => goPrev(slider)}><BiChevronLeft size={20}/></a>
                 <a onClick={() => goNext(slider)}><BiChevronRight size={20}/></a>

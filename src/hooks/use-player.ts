@@ -6,6 +6,7 @@ function usePlayer(audio: React.MutableRefObject<HTMLAudioElement>) {
     const [playing, setPlaying] = useState<boolean>(false);
     const [clickedTime, setClickedTime] = useState<any>();
     const [volume, setVolume] = useState<number>(.35);
+    const [muted, setMuted] = useState<boolean>(false);
 
     useEffect(() => {
 
@@ -30,6 +31,13 @@ function usePlayer(audio: React.MutableRefObject<HTMLAudioElement>) {
             }
         }
 
+        if(muted !== audio?.current?.muted) {
+            console.log(muted);
+            if(audio.current) {
+                audio.current.muted = muted;
+            }
+        }
+
         if (clickedTime && clickedTime !== curTime) {
             if(audio.current) {
                 audio.current.currentTime = clickedTime;
@@ -51,7 +59,9 @@ function usePlayer(audio: React.MutableRefObject<HTMLAudioElement>) {
         setPlaying,
         setClickedTime,
         volume,
-        setVolume
+        setVolume,
+        muted,
+        setMuted
     }
 }
 

@@ -18,7 +18,7 @@ const ControlPlayerWrapper = styled.div`
   padding-top: 2px;
   display: flex;
   align-items: center;
-  
+
   ._controls {
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@ const ControlPlayerWrapper = styled.div`
     a:hover {
       color: ${({theme}) => theme.primary};
     }
-    
+
     ._additionals {
       display: flex;
       align-items: center;
@@ -48,20 +48,30 @@ type ControlPlayerProps = {}
 const ControlPlayer = ({}: ControlPlayerProps) => {
 
     const audio = useRef<any>();
-    const { curTime, duration, playing, setPlaying, setClickedTime, volume, setVolume } = usePlayer(audio);
+    const {
+        curTime,
+        duration,
+        playing,
+        setPlaying,
+        setClickedTime,
+        volume,
+        setVolume,
+        muted,
+        setMuted
+    } = usePlayer(audio);
 
     return <ControlPlayerWrapper>
         <audio ref={audio} id="audio">
-            <source src={dancenow} />
+            <source src={dancenow}/>
             Your browser does not support the <code>audio</code> element.
         </audio>
-        <PlayerProgress currentTime={curTime} duration={duration} onTimeUpdate={(time: any) => setClickedTime(time)} />
+        <PlayerProgress currentTime={curTime} duration={duration} onTimeUpdate={(time: any) => setClickedTime(time)}/>
         <div className="_controls">
-            <SongInfos />
-            <Controls setPlaying={setPlaying} playing={playing} />
+            <SongInfos/>
+            <Controls setPlaying={setPlaying} playing={playing}/>
             <div className="_additionals">
-                <PlayListButton />
-                <VolumeHandler volume={volume} setVolume={setVolume} />
+                <PlayListButton/>
+                <VolumeHandler muted={muted} setMuted={setMuted} volume={volume} setVolume={setVolume}/>
             </div>
         </div>
     </ControlPlayerWrapper>

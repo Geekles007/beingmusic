@@ -1,6 +1,6 @@
-import React, {memo} from "react";
+import React, {memo, useCallback, useEffect} from "react";
 import styled from "styled-components";
-import {MdVolumeUp} from "react-icons/all";
+import {MdVolumeMute, MdVolumeOff, MdVolumeUp} from "react-icons/all";
 
 const VolumeHandlerWrapper = styled.div<{percent: number}>`
   display: flex;
@@ -45,25 +45,35 @@ const VolumeHandlerWrapper = styled.div<{percent: number}>`
 
 type VolumeHandlerProps = {
     volume: number;
+    muted: boolean;
     setVolume:  React.Dispatch<React.SetStateAction<number>>;
+    setMuted:  React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const VolumeHandler = ({volume, setVolume}: VolumeHandlerProps) => {
+const VolumeHandler = ({volume, setVolume, setMuted, muted}: VolumeHandlerProps) => {
 
-    const handleTimeDrag = (e: any) => {
+    const handleTimeDrag = useCallback((e: any) => {
         setVolume?.(e.target?.value / 100);
-    }
+    }, []);
+
+    const handleMuted = useCallback(() => {
+        setMuted((muted) => !muted);
+    }, []);
 
     return <VolumeHandlerWrapper percent={volume}>
-        <a>
-            <MdVolumeUp size={22}/>
+        <a onClick={handleMuted}>
+            {
+                muted ? <MdVolumeOff size={22}/> : <MdVolumeUp size={22}/>
+            }
         </a>
         <input
             type="range"
+            id={"volume-range"}
             className={"_progress"}
             max={100}
+            disabled={muted}
             min={0}
-            defaultValue={volume * 100}
+            defaultValue={muted ? 0 : volume * 100}
             onChange={handleTimeDrag}
         />
     </VolumeHandlerWrapper>

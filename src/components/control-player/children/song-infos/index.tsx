@@ -3,7 +3,7 @@ import styled from "styled-components";
 import SizedBox from "../../../sized-box";
 import {FaHeart} from "react-icons/all";
 import {theme} from "../../../../theme";
-import FavouriteButton from "../FavouriteButton";
+import FavouriteButton from "../favourite-button";
 
 const SongInfosWrapper = styled.div`
   display: flex;
