@@ -42,12 +42,12 @@ const SongInfos = ({}: SongInfosProps) => {
     return <SongInfosWrapper>
         <a className="album--cover">
             <img
-                src="https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/ims2dgugyjr0elv3szof/jid-the-forever-story?fimg-ssr-default"
-                alt="JID album - The forever story"/>
+                src="https://www.mymp3tracks.com/uploads/cover/6141c910e7fcc782995883.jpg"
+                alt="Wizkid album - Made in Lagos"/>
         </a>
         <div className="_infos">
-            <strong>Dance now</strong>
-            <span>JID</span>
+            <strong>Blessed</strong>
+            <span>Wizkid</span>
         </div>
         <FavouriteButton />
     </SongInfosWrapper>
