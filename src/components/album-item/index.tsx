@@ -8,8 +8,8 @@ const AlbumItemWrapper = styled.a`
   align-items: flex-start;
   
   ._cover {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     
     img {
       object-position: center;

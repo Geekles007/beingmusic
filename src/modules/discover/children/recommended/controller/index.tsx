@@ -54,29 +54,39 @@ class RecommendedController {
             },
             songs: []
         },
+        {
+            id: 6,
+            title: "Fleur Froide",
+            cover: "https://cdns-images.dzcdn.net/images/cover/51dfcb30fbab88f79d299e991081a75b/500x500.jpg",
+            artist: {
+                id: 1,
+                name: "Tayc"
+            },
+            songs: []
+        },
     ];
 
     settings: Settings = {
         dots: false,
         arrows: false,
         infinite: true,
-        speed: 1000,
+        speed: 500,
         cssEase: "linear",
-        slidesToShow: 5,
-        slidesToScroll: 5,
+        slidesToShow: 6,
+        slidesToScroll: 6,
         initialSlide: 0,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 4,
                     infinite: true,
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 3,
                 }
             },
             {

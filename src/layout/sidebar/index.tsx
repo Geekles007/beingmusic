@@ -25,7 +25,7 @@ const SideBarWrapper = styled.div`
       font-weight: 600;
       
       img {
-        height: 100%;
+        height: 70%;
       }
     }
   }
