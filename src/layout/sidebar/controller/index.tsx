@@ -1,7 +1,16 @@
 import {ILink} from "../../../models/ILink";
-import {RiCompassDiscoverLine} from "react-icons/all";
+import {
+    BiHistory,
+    GiRadioTower,
+    MdDateRange,
+    MdRecommend,
+    RiBarChartLine,
+    RiCompassDiscoverLine,
+    VscLibrary
+} from "react-icons/all";
 import React from "react";
 import {links} from "../../../constants";
+import {BiLike} from "react-icons/bi";
 
 export enum Boxes {
     explore = "Explore",
@@ -21,26 +30,26 @@ class SizeBarController {
             },
             {
                 id: 2,
-                title: "Gender",
-                icon: <RiCompassDiscoverLine size={18}/>,
+                title: "Recommendations",
+                icon: <MdRecommend size={18}/>,
                 link: links.GENDER
             },
             {
                 id: 3,
                 title: "Top chart",
-                icon: <RiCompassDiscoverLine size={18}/>,
+                icon: <RiBarChartLine size={18}/>,
                 link: links.TOP_CHART
             },
             {
                 id: 4,
                 title: "New releases",
-                icon: <RiCompassDiscoverLine size={18}/>,
+                icon: <MdDateRange size={18}/>,
                 link: links.NEW_RELEASES
             },
             {
                 id: 5,
                 title: "Radio",
-                icon: <RiCompassDiscoverLine size={18}/>,
+                icon: <GiRadioTower size={18}/>,
                 link: links.RADIO
             },
         ],],
@@ -48,19 +57,19 @@ class SizeBarController {
             {
                 id: 1,
                 title: "Library",
-                icon: <RiCompassDiscoverLine size={18}/>,
+                icon: <VscLibrary size={18}/>,
                 link: links.LIBRARY
             },
             {
                 id: 2,
                 title: "Favourites",
-                icon: <RiCompassDiscoverLine size={18}/>,
+                icon: <BiLike size={18}/>,
                 link: links.FAVOURITES
             },
             {
                 id: 3,
                 title: "History",
-                icon: <RiCompassDiscoverLine size={18}/>,
+                icon: <BiHistory size={18}/>,
                 link: links.HISTORY
             }
         ],]
