@@ -9,6 +9,10 @@ const PostBannerWrapper = styled.div`
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 type PostBannerProps = {}
@@ -16,7 +20,7 @@ type PostBannerProps = {}
 const PostBanner = ({}: PostBannerProps) => {
 
     return <PostBannerWrapper>
-
+        <h1>ADS</h1>
     </PostBannerWrapper>
 
 }
