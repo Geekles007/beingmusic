@@ -7,7 +7,7 @@ import Controls from "./children/controls";
 import PlayListButton from "./children/playlist";
 import VolumeHandler from "./children/volume-handler";
 
-import dancenow from "./../../assets/songs/JID-dancenow.mp3";
+import chacunsachance from "./../../assets/songs/chacun_sa_chance_krys_m.mp3";
 import usePlayer from "../../hooks/use-player";
 
 const ControlPlayerWrapper = styled.div`
@@ -62,7 +62,7 @@ const ControlPlayer = ({}: ControlPlayerProps) => {
 
     return <ControlPlayerWrapper>
         <audio ref={audio} id="audio">
-            <source src={dancenow}/>
+            <source src={chacunsachance}/>
             Your browser does not support the <code>audio</code> element.
         </audio>
         <PlayerProgress currentTime={curTime} duration={duration} onTimeUpdate={(time: any) => setClickedTime(time)}/>

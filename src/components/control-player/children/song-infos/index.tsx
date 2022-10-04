@@ -39,12 +39,12 @@ const SongInfos = ({}: SongInfosProps) => {
     return <SongInfosWrapper>
         <a className="album--cover">
             <img
-                src="https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/ims2dgugyjr0elv3szof/jid-the-forever-story?fimg-ssr-default"
-                alt="JID album - The forever story"/>
+                src="https://kamerlyrics.net/assets/uploads/chacun-sa-chance-krys-m.jpg"
+                alt="Krys M - Chacun sa chance"/>
         </a>
         <div className="_infos">
-            <strong>Dance now</strong>
-            <span>JID</span>
+            <strong>Chacun sa chance</strong>
+            <span>Krys M</span>
         </div>
         <FavouriteButton />
     </SongInfosWrapper>

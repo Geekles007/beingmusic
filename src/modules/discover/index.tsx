@@ -8,7 +8,7 @@ import DiscoverController from "./controller";
 import PostBanner from "./children/post-banner";
 
 const DiscoverUIWrapper = styled.section`
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
 `;
 
 type DiscoverUIProps = {}
@@ -18,17 +18,17 @@ const DiscoverUI = ({}: DiscoverUIProps) => {
     const {albums} = DiscoverController;
 
     return <DiscoverUIWrapper>
-        <BannerDiscover />
+        <BannerDiscover/>
         <Recommended albums={albums} title={"Recommended Albums"}/>
-        <SizedBox height={30} />
-        <TopMonth />
-        <SizedBox height={30} />
-        <Recommended albums={albums} title={"Afro music"} />
-        <SizedBox height={30} />
-        <PostBanner />
-        <SizedBox height={30} />
-        <Recommended albums={albums} title={"New trends"} />
-        <SizedBox height={30} />
+        <SizedBox height={30}/>
+        <TopMonth/>
+        <SizedBox height={30}/>
+        <Recommended albums={albums} title={"Afro music"}/>
+        <SizedBox height={30}/>
+        <PostBanner/>
+        <SizedBox height={30}/>
+        <Recommended albums={albums} title={"New trends"}/>
+        <SizedBox height={30}/>
     </DiscoverUIWrapper>
 
 }

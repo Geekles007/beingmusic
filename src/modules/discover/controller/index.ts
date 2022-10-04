@@ -55,6 +55,16 @@ class DiscoverController {
         },
         {
             id: 6,
+            title: "Chacun sa chance",
+            cover: "https://www.show2babi.com/File/Musics/Pochettes/Grand/5205_Krys-M-Chacun-Sa-Chance.JPG",
+            artist: {
+                id: 1,
+                name: "Krys M"
+            },
+            songs: []
+        },
+        {
+            id: 7,
             title: "Fleur Froide",
             cover: "https://cdns-images.dzcdn.net/images/cover/51dfcb30fbab88f79d299e991081a75b/500x500.jpg",
             artist: {

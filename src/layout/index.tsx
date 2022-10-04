@@ -4,6 +4,7 @@ import SideBar from "./sidebar";
 import ControlPlayer from "../components/control-player";
 import {TTheme} from "../theme";
 import {Outlet} from "react-router-dom";
+import HeaderUI from "./header";
 
 const LayoutUIWrapper = styled.div`
   overflow-y: hidden;
@@ -21,6 +22,11 @@ const LayoutUIWrapper = styled.div`
     ._content {
       grid-column: 3/13;
       overflow-y: scroll;
+      position: relative;
+    }
+    
+    ._abs {
+      
     }
   }
 `;
@@ -36,6 +42,7 @@ const LayoutUI = ({}: LayoutUIProps) => {
                 <SideBar />
             </div>
             <div className="_content">
+                <HeaderUI />
                 <Outlet />
             </div>
         </div>
