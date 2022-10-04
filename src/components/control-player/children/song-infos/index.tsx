@@ -30,6 +30,16 @@ const SongInfosWrapper = styled.div`
       font-size: .7rem;
     }
   }
+  
+  @media(max-width: 500px) {
+    ._infos {
+      display: none;
+    }
+    
+    .album--cover {
+      display: none !important;
+    }
+  }
 `;
 
 type SongInfosProps = {}

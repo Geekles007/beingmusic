@@ -29,6 +29,13 @@ const AlbumItemWrapper = styled.a`
     font-size: .8rem;
     color: ${({theme}) => theme.bright};
   }
+  
+  @media(max-width: 500px) {
+    ._cover {
+      width: 140px;
+      height: 140px;
+    }
+  }
 `;
 
 type AlbumItemProps = {

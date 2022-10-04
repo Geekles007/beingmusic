@@ -18,6 +18,8 @@ const ControlsWrapper = styled.div`
   align-self: center;
   transform: translateX(-50%);
   left: 50%;
+  
+  
 `;
 
 type ControlsProps = {

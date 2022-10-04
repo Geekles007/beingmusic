@@ -22,6 +22,10 @@ const HeaderUIWrapper = styled.div`
     align-items: center;
     gap: 1rem;
   }
+
+  @media(max-width: 1024px) {
+    position: fixed;
+  }
 `;
 
 type HeaderUIProps = {}

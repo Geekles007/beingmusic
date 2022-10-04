@@ -55,6 +55,19 @@ const BannerDiscoverWrapper = styled.div<{ bannerImage: string }>`
       }
     }
   }
+  
+  @media(max-width: 500px) {
+    background-size: cover;
+    
+    .banner--infos {
+      h2 {
+        width: 100%;
+        font-size: 2.5rem;
+        line-height: 50px;
+      }
+    }
+    
+  }
 `;
 
 const GenderName = ({name}: { name: string }) => {
@@ -71,7 +84,7 @@ const BannerDiscover = ({}: BannerDiscoverProps) => {
         bannerImage={"https://s1.ticketm.net/dam/a/b05/8aa03826-d46c-47f6-882f-96cc1fd22b05_1466981_TABLET_LANDSCAPE_LARGE_16_9.jpg"}>
         <div className="banner--infos">
             <GenderName name={"Afrobeat"}/>
-            <h2>New Album From Wizkid</h2>
+            <h2>Wizkid's New Album</h2>
             <div className="_actions">
                 <button className={"_btn play--action"}>
                     <span>Play</span>

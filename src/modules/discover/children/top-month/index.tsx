@@ -17,6 +17,18 @@ const TopMonthWrapper = styled.div`
     gap: 1rem;
     padding: 0 2rem;
   }
+  
+  @media(max-width: 480px) {
+    ._top {
+      grid-template-columns: repeat(auto-fill,minmax(100%,1fr));
+    }
+  }
+  
+  @media(max-width: 688px) {
+    ._top {
+      grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    }
+  }
 `;
 
 type TopMonthProps = {}

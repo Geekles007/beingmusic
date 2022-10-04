@@ -13,9 +13,18 @@ class RecommendedController {
         initialSlide: 0,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 1025,
                 settings: {
                     slidesToShow: 4,
+                    slidesToScroll: 4,
                     infinite: true,
                 }
             },
@@ -23,12 +32,14 @@ class RecommendedController {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 3,
+                    slidesToScroll: 3,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                 }
             }
         ]

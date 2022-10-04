@@ -41,6 +41,10 @@ const VolumeHandlerWrapper = styled.div<{percent: number}>`
     border-radius: 50%;
     cursor: pointer;
   }
+  
+  @media(max-width: 500px) {
+    display: none;
+  }
 `;
 
 type VolumeHandlerProps = {

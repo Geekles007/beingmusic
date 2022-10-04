@@ -25,8 +25,15 @@ const LayoutUIWrapper = styled.div`
       position: relative;
     }
     
-    ._abs {
+    @media(max-width: 1024px) {
+      ._sidebar {
+        display: none;
+        position: absolute;
+      }
       
+      ._content {
+        grid-column: 13;
+      }
     }
   }
 `;
